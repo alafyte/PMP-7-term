@@ -119,7 +119,6 @@ gradle-app.setting
 # Java class files
 
 # Generated files
-bin/
 gen/
 out/
 
