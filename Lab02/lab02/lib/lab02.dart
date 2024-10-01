@@ -85,7 +85,7 @@ class Employee {
     print("$name is taking $days days off.");
   }
 
-  // С необязательным параметром по умолчанию (вместо null)
+  // С необязательным параметром по умолчанию
   void workOvertime([int hours = 2]) {
     print("$name is working overtime for $hours hours.");
   }
