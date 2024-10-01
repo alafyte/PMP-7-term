@@ -1,8 +1,15 @@
 import 'dart:async';
 
-mixin Logger {
-  void log(String message) {
-    print("LOG: $message");
+mixin Tool {
+  void use(String toolName) {
+    print("Using $toolName");
+  }
+}
+class Engineer extends Employee with Tool {
+  Engineer(super.name, super.age);
+
+  void develop() {
+    use("Android Studio");
   }
 }
 
@@ -49,19 +56,11 @@ class EmployeeIterable extends Iterable<Employee> {
   Iterator<Employee> get iterator => EmployeeIterator(_employees);
 }
 
-class Manager extends Employee with Logger {
+class Manager extends Employee with Tool {
   Manager(super.name, super.age);
 
   void manage() {
-    log("$name is managing the team.");
-  }
-}
-
-class Engineer extends Employee with Logger {
-  Engineer(super.name, super.age);
-
-  void develop() {
-    log("$name is developing software.");
+    use("Jira");
   }
 }
 
